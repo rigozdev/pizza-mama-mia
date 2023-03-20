@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 
-const promesaFake = () => new Promise((resolve) => setTimeout(resolve, 500));
+const promesaFake = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
 
 export default function Pizza() {
