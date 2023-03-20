@@ -10,7 +10,7 @@ export default function Home() {
 
     const getData = async () => {
         try {
-            const callData = await fetch('pizzas.json');
+            const callData = await fetch('/pizzas.json');
             const res = await callData.json();
             setDatos(res);
 

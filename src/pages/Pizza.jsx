@@ -10,13 +10,13 @@ export default function Pizza() {
 
     const navigate = useNavigate();
 
-    const [infoPizza, setInfoPizza] = useState([]);
+    const [infoPizza, setInfoPizza] = useState({});
     const [loading, setLoading] = useState(true);
 
     const getInfoPizza = async () => {
         await promesaFake();
         try {
-            const peticionPizza = await fetch('../public/pizzas2.json');
+            const peticionPizza = await fetch('/picsas.json');
             const dataPizza = await peticionPizza.json();
             dataPizza.map((item) => {
                 if (item.id == params.id) {
