@@ -16,7 +16,7 @@ export default function Pizza() {
     const getInfoPizza = async () => {
         await promesaFake();
         try {
-            const peticionPizza = await fetch('../public/pizzas.json');
+            const peticionPizza = await fetch('../public/pizzas2.json');
             const dataPizza = await peticionPizza.json();
             dataPizza.map((item) => {
                 if (item.id == params.id) {
@@ -55,7 +55,7 @@ export default function Pizza() {
                         <article className="container-card">
                             <img src={infoPizza.img} alt="" className="img-pizza-desc"></img>
                             <div className="container-desc">
-                                <h5 className="title-card">Pizza {infoPizza.name.charAt(0).toUpperCase() + infoPizza.name.slice(1)}🍕</h5>
+                                <h5 className="title-card">Pizza {infoPizza.name}🍕</h5>
                                 <p className="text-card">{infoPizza.desc}</p>
                                 <hr />
                                 <p className="title-ingredients"><b>Ingredientes:</b></p>
